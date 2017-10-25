@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IPFS</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+
+    
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>IPFS Image Share</h1>
+
+                <label for="username">Username</label><br>
+                <input style="width: 100%" type="text" id="username"><hr/>
+                
+                <label for="my_id">My Id</label><br>
+                <input style="width: 100%" type="text" id="my_id" disabled><hr/>
+
+                <label for="peer_id">Manually enter ID</label> <br>
+                <input style="width: 50%" type="text" id="peer_id">
+                <button id="connect_button" onclick="connectToPeer(this)">Connect</button><hr/>
+
+                <label for="url">Share URL</label> <br>
+                <input style="width: 50%" type="text" id="url">
+                <button onclick="createLink()">Create link for room</button><hr/>
+
+                <label for="files">Upload an image:</label> <br>
+                <input type="file" id="files" name="files[]" /><hr/>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="demo-gallery">
+                    <ul id="lightgallery">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/ipfs/dist/index.min.js"></script>
+
+    <script src="ipfs.js"></script>
+    <script src="gallery.js"></script>
+
+</body>
+
+</html>
